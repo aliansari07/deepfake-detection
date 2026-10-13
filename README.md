@@ -133,8 +133,8 @@ checkpoint's key set. A module-by-module reference with code locations is in
 ## Installation
 
 ```bash
-git clone https://github.com/<owner>/<repo>.git
-cd <repo>
+git clone https://github.com/aliansari07/deepfake-detection.git
+cd deepfake-detection
 
 python -m venv venv
 # Windows:      venv\Scripts\activate
@@ -157,7 +157,7 @@ cache is absent.
 ## Model checkpoint
 
 Trained weights are not stored in git. They are published as assets on the repository's
-[GitHub Releases](https://github.com/<owner>/<repo>/releases) page.
+[GitHub Releases](https://github.com/aliansari07/deepfake-detection/releases) page.
 
 1. Download `demo.pt` (the model the web demo serves) from the latest release.
 2. Place it at `models/demo.pt`:
