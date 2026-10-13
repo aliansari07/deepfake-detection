@@ -1,0 +1,42 @@
+# Python dependencies (Python 3.10+; tested on 3.11 with CUDA 11.8).
+#
+# 1. Install PyTorch for your platform first. For CUDA 11.8:
+#      pip install torch==2.5.1+cu118 torchvision==0.20.1+cu118 torchaudio==2.5.1+cu118 \
+#          --index-url https://download.pytorch.org/whl/cu118
+#    CPU only:
+#      pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1
+# 2. Then: pip install -r requirements.txt
+#
+# requirements-lock.txt is the full pip freeze of the environment the test suite passes on.
+
+# ── Core ML ─────────────────────────────────────────────────
+torch==2.5.1
+torchvision==0.20.1
+timm==1.0.26
+numpy==2.4.6
+
+# ── Face detection (InsightFace SCRFD, buffalo_l) ───────────
+insightface==0.2.1
+onnxruntime==1.20.1
+
+# ── Video / image processing ────────────────────────────────
+opencv-python==4.13.0.92
+pillow==12.3.0
+imageio-ffmpeg==0.6.0  # H.264 re-encode for compress_video_test.py; bundles ffmpeg
+
+# ── Metrics / plotting ──────────────────────────────────────
+scikit-learn==1.7.2
+matplotlib==3.10.8
+
+# ── Website backend (website/backend) ───────────────────────
+fastapi[standard]==0.141.1
+uvicorn[standard]==0.53.0
+python-multipart==0.0.32
+
+# ── Optional ────────────────────────────────────────────────
+# Only needed when DD_EXPLAIN_PROVIDER=claude (src/explain.py imports it lazily).
+anthropic==1.11.0
+
+# ── Development ─────────────────────────────────────────────
+pytest==9.1.1
+ruff==0.17.0

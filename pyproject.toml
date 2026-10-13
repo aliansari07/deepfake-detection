@@ -1,0 +1,23 @@
+# Tooling configuration only — the project is run from the repository root
+# (python train.py, python infer.py, ...), not installed as a package.
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["website/node_modules", "website/.next"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+# E741: `l` as a label variable is used consistently across the eval scripts.
+# B905: zip() strict= would change behaviour on length mismatch; left as-is.
+ignore = ["E741", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# The test-access log header is a Markdown table written verbatim to disk.
+"src/test_access.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src", "tools"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

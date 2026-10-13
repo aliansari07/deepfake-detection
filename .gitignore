@@ -1,0 +1,66 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.ipynb_checkpoints/
+
+# ── Virtual environments ────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── IDE / editor / OS ───────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+~$*
+
+# ── Secrets / local configuration ───────────────────────────
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# ── Model weights ───────────────────────────────────────────
+# Checkpoints are distributed as GitHub Release assets, never committed.
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.safetensors
+# Exception: a small reference tensor that pins the legacy frequency path in tests.
+!tests/assets/freq_legacy_ref.pt
+
+# ── Data and generated outputs ──────────────────────────────
+datasets/
+checkpoints/
+models/
+logs/
+results/
+gradcam/
+outputs/
+*.zip
+*.log
+
+# ── Node / Next.js (website) ────────────────────────────────
+node_modules/
+.next/
+out/
+npm-debug.log*
+*.tsbuildinfo

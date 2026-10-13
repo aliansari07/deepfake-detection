@@ -1,0 +1,14 @@
+# Backend for the deepfake detector website.
+# Install (into your existing venv):
+#   pip install "fastapi[standard]" python-multipart
+#
+# Run from the project root:
+#   uvicorn website.backend.main:app --port 8000
+
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+
+# Only needed when DD_EXPLAIN_PROVIDER=claude (src/explain.py Custom_AI_Explainer_Agent).
+# The default DD_EXPLAIN_PROVIDER=local path has no dependency on this.
+anthropic>=0.40

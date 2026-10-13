@@ -1,0 +1,41 @@
+{
+  "_generated_by": "tools/make_site_stats.py \u2014 do not edit by hand (PLAN F2b)",
+  "model": {
+    "alias": "demo",
+    "run": "M1-20",
+    "sha256": "76a168c3c93b1fe2",
+    "promoted_utc": "2026-10-06 08:11:04",
+    "epoch": "14",
+    "threshold": 0.9441803693771362,
+    "split": "ffpp_official_v1.json"
+  },
+  "architecture": {
+    "frequency_branch": true,
+    "transformer": true,
+    "spatial_backbone": "EfficientNet-B0",
+    "frequency_input": "spectrum",
+    "frames_per_clip": 10
+  },
+  "test": {
+    "dataset": "FaceForensics++ C23, identity-disjoint test split",
+    "n": 840,
+    "accuracy": 0.7583333333333333,
+    "balanced_accuracy": 0.815,
+    "auc": 0.9115306122448978,
+    "auc_ci": [
+      0.8888749409486015,
+      0.932703775276229
+    ],
+    "threshold": 0.9441803693771362
+  },
+  "cross_dataset": {
+    "dataset": "Celeb-DF v2, official 518-video protocol",
+    "n": 518,
+    "accuracy": 0.7239382239382239,
+    "auc": 0.7526933245208196,
+    "auc_ci": [
+      0.7103293385726096,
+      0.7960367939614511
+    ]
+  }
+}
