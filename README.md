@@ -27,7 +27,7 @@ of frames before a final verdict. Grad-CAM heatmaps show which facial regions dr
 - **Compression-aware training.** Per-video JPEG, blur, resize and noise augmentation simulates
   social-media re-encoding.
 - **Explainability.** Grad-CAM heatmaps on the spatial branch, plus an optional plain-language
-  explanation of each verdict (offline template by default, or the Anthropic API if configured).
+  explanation of each verdict.
 - **Reproducible evaluation.** Committed, identity-disjoint data splits; bootstrap confidence
   intervals; a locked test split that logs every access; checkpoints that record their own
   architecture, split hash and git commit.
