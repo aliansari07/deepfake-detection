@@ -41,15 +41,16 @@ of frames before a final verdict. Grad-CAM heatmaps show which facial regions dr
 
 ## Results
 
-The model served by the web demo (run `M1-20`, the full gated dual-stream model with the Transformer):
+Evaluation of the promoted web-demo model (run `M1-20`, epoch 14, checkpoint `76a168c3c93b1fe2`, trained on `splits/ffpp_official_v1.json`):
 
-| Benchmark | n | AUC (95% CI) | Accuracy |
-|---|---|---|---|
-| FaceForensics++ C23, identity-disjoint test split | 840 | 0.912 (0.889–0.933) | 75.8% (balanced 81.5%) |
-| Celeb-DF v2, official 518-video test list (cross-dataset) | 518 | 0.753 (0.710–0.796) | 72.4% |
+| Benchmark | n | AUC (95% CI) | Accuracy | Balanced Accuracy |
+|---|---|---|---|---|
+| FaceForensics++ C23, identity-disjoint test split | 840 | 0.912 (0.889–0.933) | 75.8% | 81.5% |
+| Celeb-DF v2, official 518-video protocol (cross-dataset) | 518 | 0.753 (0.710–0.796) | 72.4% | — |
 
-These figures come from [`website/lib/modelStats.json`](website/lib/modelStats.json), which is
-generated from the evaluation outputs by `tools/make_site_stats.py`.
+> **Operating threshold & class balance note:** Binary accuracy figures are evaluated at the validation-calibrated operating threshold of $p = 0.944$ (`0.9442`) stored in the checkpoint. Because FaceForensics++ C23 evaluates five manipulation methods against one real class (~5:1 manipulated-to-real ratio) and the high threshold favors precision on real videos, raw accuracy (`75.8%`) is lower than balanced accuracy (`81.5%`), which weights real and fake recall equally.
+
+These figures come directly from [`website/lib/modelStats.json`](website/lib/modelStats.json), generated from the evaluation outputs by `tools/make_site_stats.py`.
 
 ---
 
