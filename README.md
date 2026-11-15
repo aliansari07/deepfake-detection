@@ -2,6 +2,11 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24241907.svg)](https://doi.org/10.5281/zenodo.24241907)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--4782--0885-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-4782-0885)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch 2.5](https://img.shields.io/badge/PyTorch-2.5-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-D22128?logo=apache&logoColor=white)](LICENSE)
 
 **Trusting Digital Media — a dual-stream, gated, temporal deepfake video detector.**
 
@@ -271,9 +276,6 @@ The run id is a name plus the number of epochs (`M1-20` means 20 epochs). Checkp
 | `--no-augment` | Disable compression-aware augmentation |
 | `--seed N` | Change the random seed |
 
-> The default split, `splits/legacy_t4-20.json`, exists only to reproduce the project's
-> first-phase results. It overlaps identities between train and validation, so use
-> `splits/ffpp_official_v1.json` for new work. See [`splits/README.md`](splits/README.md).
 
 ### Evaluation
 
@@ -289,7 +291,7 @@ python cross_eval.py --checkpoint checkpoints/M1-20.best.pt
 
 # Robustness and analysis
 python compress_test.py --checkpoint <ckpt>         # JPEG quality sweep
-python compress_video_test.py --checkpoints <ckpt>  # H.264 CRF sweep
+python compress_video_test.py --checkpoint <ckpt>  # H.264 CRF sweep
 python freq_ablate.py --checkpoint <ckpt>           # gate modes: full / spatial / freq
 python analyse.py gate --checkpoint <ckpt>          # gate weights, real vs fake
 python tools/compare_runs.py --help                 # paired comparison of two runs
@@ -347,5 +349,6 @@ If you build upon this architecture, evaluation protocol, or our empirical findi
   type         = {Bachelor's Final Year Project Report},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.24241907},
-  url          = {[https://doi.org/10.5281/zenodo.24241907](https://doi.org/10.5281/zenodo.24241907)}
+  url          = {https://doi.org/10.5281/zenodo.24241907}
 }
+```
