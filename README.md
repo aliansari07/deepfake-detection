@@ -1,5 +1,8 @@
 # Deepfake Detection System
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24241907.svg)](https://doi.org/10.5281/zenodo.24241907)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0002--4782--0885-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-4782-0885)
+
 **Trusting Digital Media — a dual-stream, gated, temporal deepfake video detector.**
 
 This repository contains the model, training and evaluation code, and a web demo for a deepfake
@@ -330,4 +333,19 @@ terms, so check them before use.
 - **Grad-CAM**: Selvaraju et al., ICCV 2017.
 - Built with PyTorch, FastAPI and Next.js.
 
-Final-year project, FAST NUCES Karachi.
+## Citation
+
+If you build upon this architecture, evaluation protocol, or our empirical findings on spatial-frequency fusion under C23 compression, please cite our Final Year Project report:
+
+```bibtex
+@techreport{ansari2026trusting,
+  author       = {Ansari, Muhammad Ali and Meraj, Sabih Uddin and Hasan, Muhammad},
+  title        = {{Trusting Digital Media: Deepfake Detection}},
+  institution  = {National University of Computer and Emerging Sciences (FAST-NUCES)},
+  year         = {2026},
+  month        = oct,
+  type         = {Bachelor's Final Year Project Report},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24241907},
+  url          = {[https://doi.org/10.5281/zenodo.24241907](https://doi.org/10.5281/zenodo.24241907)}
+}
