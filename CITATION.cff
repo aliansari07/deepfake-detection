@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software or reference our evaluation results, please cite our Final Year Project report."
 title: "Trusting Digital Media: Deepfake Detection"
-type: report
+type: software
 version: 1.0.0
 date-released: 2026-10-25
 doi: 10.5281/zenodo.24241907
 url: "https://github.com/aliansari07/deepfake-detection"
 repository-code: "https://github.com/aliansari07/deepfake-detection"
-license: CC-BY-4.0
+license: Apache-2.0
 authors:
   - family-names: "Ansari"
     given-names: "Muhammad Ali"
@@ -19,3 +19,23 @@ authors:
   - family-names: "Hasan"
     given-names: "Muhammad"
     affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES)"
+preferred-citation:
+  type: report
+  title: "Trusting Digital Media: Deepfake Detection"
+  authors:
+    - family-names: "Ansari"
+      given-names: "Muhammad Ali"
+      orcid: "https://orcid.org/0009-0002-4782-0885"
+      affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES)"
+    - family-names: "Meraj"
+      given-names: "Sabih Uddin"
+      affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES)"
+    - family-names: "Hasan"
+      given-names: "Muhammad"
+      affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES)"
+  institution:
+    name: "National University of Computer and Emerging Sciences (FAST-NUCES)"
+  year: 2026
+  month: 10
+  doi: 10.5281/zenodo.24241907
+  url: "https://doi.org/10.5281/zenodo.24241907"
